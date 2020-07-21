@@ -1,2 +1,2 @@
 <h1>Welkome to produсts list!!!</h1>
-<product *ngFor = "let prod of products" [product] = "prod" (removeEvent)="removeProduct($event)" (editEvent)="editProduct($event)" ></product>
+<product *ngFor = "let prod of products" [product] = "prod" (removeEvent)="removeProduct($event)" (editEvent)="editProduct($event)" [class.hidden]="isProductsHidden"></product>

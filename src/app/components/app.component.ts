@@ -8,7 +8,7 @@ import { Product } from '../models/product';
 })
 export class AppComponent {
   title = 'product-list';
-
+  isProductsHidden = false;
   products: Product[] = [];
 
   constructor(){
