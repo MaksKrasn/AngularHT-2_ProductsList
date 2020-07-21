@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -6,7 +6,7 @@ import { Product } from 'src/app/models/product';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
 
   @Input() product: Product;
   @Output() editEvent = new EventEmitter<number>();

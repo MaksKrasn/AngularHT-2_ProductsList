@@ -6,7 +6,7 @@
       <p class="card-text"> {{product.description}}</p>
       <h6 class="card-title">{{product.price}}</h6>
       <!--<a href="#" class="btn btn-primary">Переход куда-нибудь</a>-->
-      <button type="button" class="btn btn-warning">Редактировать</button>
-      <button type="button" class="btn btn-danger">Удалить</button>
+      <button type="button" class="btn btn-warning" (click) = "onClickEdit()">Редактировать</button>
+      <button type="button" class="btn btn-danger" (click) = "onClickRemove()">Удалить</button>
     </div>
 </div>
