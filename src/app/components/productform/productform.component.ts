@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'productform',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductformComponent implements OnInit {
 
-  constructor() { }
+  @Input() @Output() product: Product;
 
-  ngOnInit(): void {
+  constructor(product: Product) { 
+    this.product = product;
+  }
+
+  ngOnInit(): void { 
   }
 
 }
