@@ -9,13 +9,11 @@ import { Product } from 'src/app/models/product';
 export class ProductComponent {
 
   @Input() product: Product;
+
   @Output() editEvent = new EventEmitter<number>();
   @Output() removeEvent = new EventEmitter<number>();
 
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
   onClickEdit(){

@@ -28,5 +28,8 @@ export class AppComponent {
     console.log('Edit: ' + id);
   }
 
+  addProduct(){
+    this.isProductsHidden = true;
+  }
 
 }

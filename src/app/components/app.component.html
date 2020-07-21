@@ -1,2 +1,3 @@
 <h1>Welkome to produсts list!!!</h1>
+<button type="button" class="btn-success" (click) = "addProduct()" [class.hidden]="isProductsHidden">Добавить новый продукт</button>
 <product *ngFor = "let prod of products" [product] = "prod" (removeEvent)="removeProduct($event)" (editEvent)="editProduct($event)" [class.hidden]="isProductsHidden"></product>
