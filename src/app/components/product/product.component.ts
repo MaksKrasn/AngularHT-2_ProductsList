@@ -19,10 +19,12 @@ export class ProductComponent implements OnInit {
   }
 
   onClickEdit(){
+    alert();
     this.editEvent.emit(this.product.id);
   }
 
   onClickRemove(){
+    alert();
     this.removeEvent.emit(this.product.id);
   }
 }
