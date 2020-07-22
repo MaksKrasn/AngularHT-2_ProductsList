@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import{ FormsModule } from '@angular/forms'
 
 @Component({
   selector: 'productform',

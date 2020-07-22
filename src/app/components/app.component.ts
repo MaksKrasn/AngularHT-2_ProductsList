@@ -8,7 +8,7 @@ import { Product } from '../models/product';
 })
 export class AppComponent {
   title = 'product-list';
-  isProductsHidden = false;
+  isProductsVisible = true;
   products: Product[] = [];
 
   constructor(){
@@ -29,7 +29,7 @@ export class AppComponent {
   }
 
   addProduct(){
-    this.isProductsHidden = true;
+    this.isProductsVisible = false;
   }
 
 }
