@@ -1,6 +1,6 @@
 <p>Введите Ваши данные</p>
-<input [(ngModel)] = "name" />
-<input [(ngModel)] = "category" />
-<input [(ngModel)] = "price" />
-<input [(ngModel)] = "description" />
+<input [(ngModel)] = "name" placeholder="Product name"/>
+<input [(ngModel)] = "category" placeholder="Category"/>
+<input type = "number" [(ngModel)] = "price" placeholder = "Price" />
+<input [(ngModel)] = "description" placeholder="Description"/>
 <button type="button" class="btn-danger" (click) = "onClickSave()">Save</button>

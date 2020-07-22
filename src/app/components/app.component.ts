@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from '../models/product';
-import { ProductformComponent } from '../components/productform/productform.component';
+
 
 @Component({
   selector: 'app-root',
@@ -32,9 +32,13 @@ export class AppComponent {
   }
 
   addProduct(product: Product){
+    this.isProductsVisible = true;
+    if(this.products.length > 0){
+      let lastProduct = this.products[this.products.length - 1];
+      product.id = lastProduct.id + 1;
+    }
+    this.products.push(product);
     console.log(product);
-    //this.isProductsVisible = false;
-    this.selectedProduct = null;
   }
 
 }

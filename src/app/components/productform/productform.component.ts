@@ -23,7 +23,7 @@ export class ProductformComponent implements OnInit {
   }
 
   onClickSave(){
-    this.product = new Product(0, this.name, this.category, this.price, this.description);
+    this.product = new Product(0, this.name, this.category, this.price , this.description);
     //console.log(this.product);
     this.saveEvent.emit(this.product);
   }
