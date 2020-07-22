@@ -4,4 +4,4 @@
     <product *ngFor = "let prod of products" [product] = "prod" (removeEvent)="removeProduct($event)" (editEvent)="editProduct($event)"></product>
 </div>
 
-<productform (saveEvent) = "addProduct($event)"></productform>
+<productform *ngIf = "isAddFormVisible" (saveEvent) = "addProduct($event)"></productform>

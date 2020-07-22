@@ -10,6 +10,7 @@ import { Product } from '../models/product';
 export class AppComponent {
   title = 'product-list';
   isProductsVisible = true;
+  isAddFormVisible = false;
   products: Product[] = [];
 
   selectedProduct: Product;
@@ -31,14 +32,21 @@ export class AppComponent {
     console.log('Edit: ' + id);
   }
 
+  addFormOpen(){
+    this.isAddFormVisible = true;
+    this.isProductsVisible = false;
+  }
+
   addProduct(product: Product){
-    this.isProductsVisible = true;
+    
     if(this.products.length > 0){
       let lastProduct = this.products[this.products.length - 1];
       product.id = lastProduct.id + 1;
     }
     this.products.push(product);
     console.log(product);
+    this.isProductsVisible = true;
+    this.isAddFormVisible = false;
   }
 
 }
