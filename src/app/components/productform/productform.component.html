@@ -1,1 +1,6 @@
-<p>productform works!</p>
+<p>Введите Ваши данные</p>
+<input [(ngModel)] = "product.name" />
+<input [(ngModel)] = "product.category" />
+<input [(ngModel)] = "product.price" />
+<input [(ngModel)] = "product.description" />
+<button type="button" class="btn-danger" (click) = "onClickSave(product)">Save</button>
