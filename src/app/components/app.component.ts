@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from '../models/product';
+import { ProductformComponent } from '../components/productform/productform.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent {
   title = 'product-list';
   isProductsVisible = true;
   products: Product[] = [];
+
+  selectedProduct: Product;
 
   constructor(){
     this.products.push(new Product(1, 'Product1', 'Category1', 1000, 'Description1'));
@@ -28,8 +31,10 @@ export class AppComponent {
     console.log('Edit: ' + id);
   }
 
-  addProduct(){
-    this.isProductsVisible = false;
+  addProduct(product: Product){
+    console.log(product);
+    //this.isProductsVisible = false;
+    this.selectedProduct = null;
   }
 
 }

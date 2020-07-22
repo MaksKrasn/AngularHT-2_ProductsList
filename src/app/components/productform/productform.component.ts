@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/models/product';
-//import{ FormsModule } from '@angular/forms'
+
 
 @Component({
   selector: 'productform',
@@ -9,7 +9,7 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductformComponent implements OnInit {
 
-  @Input() @Output() product: Product = null;
+  @Input() product: Product = null;
   @Output() saveEvent: EventEmitter<Product> = new EventEmitter<Product>();
 
   constructor(product?: Product) { 
