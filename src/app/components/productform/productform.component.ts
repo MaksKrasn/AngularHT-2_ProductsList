@@ -9,19 +9,23 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductformComponent implements OnInit {
 
-  @Input() product: Product = null;
+  product: Product = null;
+  @Input() name: string = '';
+  @Input() category: string = '';
+  @Input() price: number;
+  @Input() description: string = '';
   @Output() saveEvent: EventEmitter<Product> = new EventEmitter<Product>();
 
-  constructor(product?: Product) { 
-    if(product != null){
+  constructor(/*product?: Product*/) { 
+    /*if(product != null){
       this.product = product;
-    }
+    }*/
   }
 
-  onClickSave(product: Product){
-    console.log(product);
-    this.product = product;
-    this.saveEvent.emit(product);
+  onClickSave(){
+    this.product = new Product(0, this.name, this.category, this.price, this.description);
+    //console.log(this.product);
+    this.saveEvent.emit(this.product);
   }
 
   ngOnInit(): void { 
