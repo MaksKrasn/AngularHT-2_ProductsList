@@ -1,5 +1,5 @@
 <h1>Welkome to produсts list!!!</h1>
-<button type="button" class="btn-success" (click) = "addProduct()" *ngIf="isProductsVisible">Добавить новый продукт</button>
+<button type="button" class="btn-success" (click) = "addFormOpen()" *ngIf="isProductsVisible">Добавить новый продукт</button>
 <div *ngIf="isProductsVisible">
     <product *ngFor = "let prod of products" [product] = "prod" (removeEvent)="removeProduct($event)" (editEvent)="editProduct($event)"></product>
 </div>
