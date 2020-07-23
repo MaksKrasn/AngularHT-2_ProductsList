@@ -8,6 +8,7 @@ import { Product } from 'src/app/models/product';
 })
 export class EditprodformComponent implements OnInit {
   product: Product = null;
+  id: number;
   @Input() name: string = '';
   @Input() category: string = '';
   @Input() price: number;
@@ -15,14 +16,16 @@ export class EditprodformComponent implements OnInit {
   @Output() editEvent: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() cancelEvent: EventEmitter<null> = new EventEmitter<null>();
 
-  constructor(product?: Product) { 
-    if(product != null){
-      this.product = product;
-    }
+  constructor(product: Product) {
+    this.id = product.id;
+    this.name = product.name;
+    this.category = product.category;
+    this.price = product.price;
+    this.description = product.description; 
   }
 
   onClickEdit(){
-    this.product = new Product(0, this.name, this.category, this.price , this.description);
+    this.product = new Product(this.id, this.name, this.category, this.price , this.description);
     console.log(this.product);
     this.editEvent.emit(this.product);
   }

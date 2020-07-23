@@ -11,9 +11,10 @@ export class AppComponent {
   title = 'product-list';
   isProductsVisible = true;
   isAddFormVisible = false;
+  isEditFormVisible = false;
   products: Product[] = [];
 
-  selectedProduct: Product;
+  product: Product;
 
   constructor(){
     this.products.push(new Product(1, 'Product1', 'Category1', 1000, 'Description1'));
@@ -28,12 +29,16 @@ export class AppComponent {
     this.products.splice(idx, 1);
   }
 
-  editProduct(id: number) {
-    console.log('Edit: ' + id);
-  }
-
   addFormOpen(){
     this.isAddFormVisible = true;
+    this.isProductsVisible = false;
+  }
+
+  editFormOpen(id: number){
+    console.log('editformevent' + id);
+    let idx  = this.products.findIndex(prod => prod.id == id);
+    this.product = this.products[idx];
+    this.isEditFormVisible = true;
     this.isProductsVisible = false;
   }
 
@@ -47,6 +52,10 @@ export class AppComponent {
     console.log(product);
     this.isProductsVisible = true;
     this.isAddFormVisible = false;
+  }
+
+  editProduct(id: number) {
+    console.log('Edit_main: ' + id);
   }
 
   goToMainScreen(){

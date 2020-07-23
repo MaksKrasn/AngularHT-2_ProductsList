@@ -1,7 +1,9 @@
 <h1 style="color:darkgreen">Список продуктов</h1>
 <button type="button" class="btn btn-success" (click) = "addFormOpen()" *ngIf="isProductsVisible">Добавить новый продукт</button>
 <div *ngIf="isProductsVisible">
-    <product *ngFor = "let prod of products" [product] = "prod" (removeEvent)="removeProduct($event)" (editEvent)="editProduct($event)"></product>
+    <product *ngFor = "let prod of products" [product] = "prod" (removeEvent)="removeProduct($event)" (editEvent)="editFormOpen($event)"></product>
 </div>
 
 <productform *ngIf = "isAddFormVisible" (saveEvent) = "addProduct($event)" (cancelEvent) = "goToMainScreen()"></productform>
+
+<editprodform *ngIf = "isEditFormVisible" [product] = "product" (editEvent) = "editProduct($event)" (cancelEvent) = "goToMainScreen()"></editprodform>
