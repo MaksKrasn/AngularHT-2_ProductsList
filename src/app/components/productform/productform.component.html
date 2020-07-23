@@ -1,26 +1,21 @@
-<p>Введите Ваши данные</p>
-<!--<input [(ngModel)] = "name" placeholder="Product name"/>
-<input [(ngModel)] = "category" placeholder="Category"/>
-<input type = "number" [(ngModel)] = "price" placeholder = "Price" />
-<input [(ngModel)] = "description" placeholder="Description"/>
-<button type="button" class="btn-danger" (click) = "onClickSave()">Save</button>-->
+<h2>Введите новый продукт</h2>
 
 <form>
     <div class="form-group">
       <label for="formGroupExampleInput">Product name</label>
-      <input type="text" [(ngModel)] = "name" class="form-control" id="formGroupExampleInput" placeholder="Product name">
+      <input type="text" [(ngModel)] = "name" name="name" class="form-control" id="formGroupExampleInput" placeholder="Product name" />
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput2">Category</label>
-      <input type="text" [(ngModel)] = "category" class="form-control" id="formGroupExampleInput2" placeholder="Category">
+      <input type="text" [(ngModel)] = "category" name="category" class="form-control" id="formGroupExampleInput2" placeholder="Category" />
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Price</label>
-        <input type="number" [(ngModel)] = "price" class="form-control" id="formGroupExampleInput2" placeholder="Price">
+        <input type="number" [(ngModel)] = "price" name="price" class="form-control" id="formGroupExampleInput2" placeholder="Price" />
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Description</label>
-        <input type="number" [(ngModel)] = "description" class="form-control" id="formGroupExampleInput2" placeholder="Description">
+        <input type="text" [(ngModel)] = "description" name="description" class="form-control" id="formGroupExampleInput2" placeholder="Description" />
     </div>
     <button type="button" class="btn btn-danger" (click) = "onClickSave()">Save</button>
     <button type="button" class="btn btn-primary" (click) = "onClickCancel()">Cancel</button>

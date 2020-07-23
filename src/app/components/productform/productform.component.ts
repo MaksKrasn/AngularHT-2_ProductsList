@@ -25,11 +25,12 @@ export class ProductformComponent implements OnInit {
 
   onClickSave(){
     this.product = new Product(0, this.name, this.category, this.price , this.description);
-    //console.log(this.product);
+    console.log(this.product);
     this.saveEvent.emit(this.product);
   }
 
   onClickCancel(){
+    console.log('Cancel');
     this.cancelEvent.emit();
   }
 
