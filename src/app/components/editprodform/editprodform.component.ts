@@ -7,8 +7,8 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./editprodform.component.css']
 })
 export class EditprodformComponent implements OnInit {
-  @Input() product: Product = null;
-  id: number;
+  @Input() product: Product;
+  @Input() id: number;
   @Input() name: string = '';
   @Input() category: string = '';
   @Input() price: number;
@@ -16,12 +16,12 @@ export class EditprodformComponent implements OnInit {
   @Output() editEvent: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() cancelEvent: EventEmitter<null> = new EventEmitter<null>();
 
-  constructor(product: Product) {
-    this.id = product.id;
-    this.name = product.name;
-    this.category = product.category;
-    this.price = product.price;
-    this.description = product.description;
+  constructor() {
+    //this.id = this.product.id;
+    this.name = this.product.name;
+    this.category = this.product.category;
+    this.price = this.product.price;
+    this.description = this.product.description;
     console.log('editform' + this.name); 
   }
 
@@ -37,5 +37,6 @@ export class EditprodformComponent implements OnInit {
   }
 
   ngOnInit(): void { 
+    
   }
 }
