@@ -7,7 +7,7 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./editprodform.component.css']
 })
 export class EditprodformComponent implements OnInit {
-  product: Product = null;
+  @Input() product: Product = null;
   id: number;
   @Input() name: string = '';
   @Input() category: string = '';
@@ -21,7 +21,8 @@ export class EditprodformComponent implements OnInit {
     this.name = product.name;
     this.category = product.category;
     this.price = product.price;
-    this.description = product.description; 
+    this.description = product.description;
+    console.log('editform' + this.name); 
   }
 
   onClickEdit(){

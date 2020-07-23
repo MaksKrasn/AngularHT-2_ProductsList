@@ -38,6 +38,7 @@ export class AppComponent {
     console.log('editformevent' + id);
     let idx  = this.products.findIndex(prod => prod.id == id);
     this.product = this.products[idx];
+    console.log(this.product);
     this.isEditFormVisible = true;
     this.isProductsVisible = false;
   }

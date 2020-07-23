@@ -6,7 +6,7 @@ import { AppComponent } from './components/app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductformComponent } from './components/productform/productform.component';
 import{ FormsModule } from '@angular/forms';
-import { EditprodformComponent } from './components/editprodform/editprodform.component'
+import { EditprodformComponent } from './components/editprodform/editprodform.component';
 
 @NgModule({
   declarations: [
