@@ -49,4 +49,9 @@ export class AppComponent {
     this.isAddFormVisible = false;
   }
 
+  goToMainScreen(){
+    this.isProductsVisible = true;
+    this.isAddFormVisible = false;
+  }
+
 }
