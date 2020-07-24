@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -6,7 +6,7 @@ import { Product } from 'src/app/models/product';
   templateUrl: './editprodform.component.html',
   styleUrls: ['./editprodform.component.css']
 })
-export class EditprodformComponent implements OnInit {
+export class EditprodformComponent implements OnInit, OnChanges {
   @Input() product: Product;
   @Input() id: number;
   @Input() name: string = '';
@@ -16,13 +16,8 @@ export class EditprodformComponent implements OnInit {
   @Output() editEvent: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() cancelEvent: EventEmitter<null> = new EventEmitter<null>();
 
-  constructor() {
-    //this.id = this.product.id;
-    this.name = this.product.name;
-    this.category = this.product.category;
-    this.price = this.product.price;
-    this.description = this.product.description;
-    console.log('editform' + this.name); 
+  constructor() { 
+    
   }
 
   onClickEdit(){
@@ -37,6 +32,13 @@ export class EditprodformComponent implements OnInit {
   }
 
   ngOnInit(): void { 
-    
+  }
+
+  ngOnChanges(): void{
+    this.id = this.product.id;
+    this.name = this.product.name;
+    this.category = this.product.category;
+    this.price = this.product.price;
+    this.description = this.product.description;
   }
 }

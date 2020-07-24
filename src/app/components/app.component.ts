@@ -55,13 +55,15 @@ export class AppComponent {
     this.isAddFormVisible = false;
   }
 
-  editProduct(id: number) {
-    console.log('Edit_main: ' + id);
+  editProduct(product: Product) {
+    console.log('main edit');
+    console.log(product);
   }
 
   goToMainScreen(){
     this.isProductsVisible = true;
     this.isAddFormVisible = false;
+    this.isEditFormVisible = false;
   }
 
 }
