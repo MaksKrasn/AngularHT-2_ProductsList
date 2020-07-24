@@ -13,6 +13,7 @@ export class AppComponent {
   isAddFormVisible = false;
   isEditFormVisible = false;
   products: Product[] = [];
+  editIdx: number;
 
   product: Product;
 
@@ -36,8 +37,8 @@ export class AppComponent {
 
   editFormOpen(id: number){
     console.log('editformevent' + id);
-    let idx  = this.products.findIndex(prod => prod.id == id);
-    this.product = this.products[idx];
+    this.editIdx  = this.products.findIndex(prod => prod.id == id);
+    this.product = this.products[this.editIdx];
     console.log(this.product);
     this.isEditFormVisible = true;
     this.isProductsVisible = false;
@@ -58,6 +59,9 @@ export class AppComponent {
   editProduct(product: Product) {
     console.log('main edit');
     console.log(product);
+    this.products[this.editIdx] = product;
+    this.isProductsVisible = true;
+    this.isEditFormVisible = false;
   }
 
   goToMainScreen(){
