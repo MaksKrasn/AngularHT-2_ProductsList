@@ -26,6 +26,7 @@ export class AppComponent {
 
   removeProduct(id: number) {
     console.log('Remove: ' + id);
+    alert('Удалить продукт?');
     let idx  = this.products.findIndex(prod => prod.id == id);
     this.products.splice(idx, 1);
   }
