@@ -127,10 +127,6 @@
   },
   "defaultProject": "product-list",
   "cli": {
-<<<<<<< HEAD
     "analytics": false
-=======
-    "analytics": "897476c5-e539-44d2-962e-0dcb6e82b1a9"
->>>>>>> MaksBranch
   }
 }
