@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +127,10 @@
   },
   "defaultProject": "product-list",
   "cli": {
+<<<<<<< HEAD
     "analytics": false
+=======
+    "analytics": "897476c5-e539-44d2-962e-0dcb6e82b1a9"
+>>>>>>> MaksBranch
   }
 }
